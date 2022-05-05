@@ -1,6 +1,8 @@
 # proto-go-course
 
-[![build main branch](https://github.com/Clement-Jean/proto-go-course/actions/workflows/build.yml/badge.svg)](https://github.com/Clement-Jean/proto-go-course/actions/workflows/build.yml) [![Lint protobuf](https://github.com/Clement-Jean/proto-go-course/actions/workflows/lint.yml/badge.svg)](https://github.com/Clement-Jean/proto-go-course/actions/workflows/lint.yml)
+Protobuf Go 학습 archiving 목적
+
+[![build main branch](https://github.com/gain620/proto-go-course/actions/workflows/build.yml/badge.svg)](https://github.com/gain620/proto-go-course/actions/workflows/build.yml) [![Lint protobuf](https://github.com/gain620/proto-go-course/actions/workflows/lint.yml/badge.svg)](https://github.com/gain620/proto-go-course/actions/workflows/lint.yml)
 
 ## Notes
 

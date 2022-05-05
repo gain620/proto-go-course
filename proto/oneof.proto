@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package example.oneof;
 
-option go_package = "github.com/Clement-Jean/proto-go-course/proto";
+option go_package = "github.com/gain620/proto-go-course/proto";
 
 message Result {
   oneof result {
