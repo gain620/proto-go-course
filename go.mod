@@ -1,4 +1,4 @@
-module github.com/Clement-Jean/proto-go-course
+module github.com/gain620/proto-go-course
 
 go 1.17
 
