@@ -20,7 +20,7 @@ endif
 
 .PHONY: build generate clean run all
 
-all: generate build run clean
+all: generate build run
 
 build:
 	go build -o ${BIN} .

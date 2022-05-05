@@ -4,25 +4,29 @@ import (
 	"fmt"
 	"reflect"
 
-	pb "github.com/Clement-Jean/proto-go-course/proto"
+	pb "github.com/gain620/proto-go-course/proto"
 	"google.golang.org/protobuf/proto"
 )
 
 func doSimple() *pb.Simple {
 	return &pb.Simple{
-		Id:          42,
-		Name:        "My name",
+		Id:          412,
+		Name:        "Gain Chang",
 		IsSimple:    true,
 		SampleLists: []int32{1, 2, 3, 4, 5, 6},
+		GameTitle:   "Elden Ring",
+		GameLists:   []string{"The legend of zelda", "Sims4", "Kirby", "Star Wars"},
 	}
 }
 
 func doComplex() *pb.Complex {
+	dummy := &pb.Dummy{Id: 42, Name: "My name1"}
 	return &pb.Complex{
-		OneDummy: &pb.Dummy{Id: 42, Name: "My name"},
+		OneDummy: dummy,
 		MultipleDummies: []*pb.Dummy{
 			{Id: 43, Name: "My name 2"},
 			{Id: 44, Name: "My name 3"},
+			dummy,
 		},
 	}
 }
@@ -72,8 +76,8 @@ func doFromJSON(jsonString string, t reflect.Type) proto.Message {
 }
 
 func main() {
-	fmt.Println(doSimple())
-	// fmt.Println(doComplex())
+	//fmt.Println(doSimple())
+	fmt.Println(doComplex())
 	// fmt.Println(doEnum())
 	// doOneOf(&pb.Result_Id{Id: 42})
 	// doOneOf(&pb.Result_Message{Message: "My name"})
