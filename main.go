@@ -77,7 +77,7 @@ func doFromJSON(jsonString string, t reflect.Type) proto.Message {
 
 func main() {
 	//fmt.Println(doSimple())
-	fmt.Println(doComplex())
+	//fmt.Println(doComplex())
 	// fmt.Println(doEnum())
 	// doOneOf(&pb.Result_Id{Id: 42})
 	// doOneOf(&pb.Result_Message{Message: "My name"})
@@ -86,4 +86,12 @@ func main() {
 	// fmt.Println(doFromJSON(toJSON(doSimple()), reflect.TypeOf(pb.Simple{})))
 	// fmt.Println(doFromJSON(toJSON(doComplex()), reflect.TypeOf(pb.Complex{})))
 	// fmt.Println(doFromJSON(`{"id": 42, "unknown": "test"}`, reflect.TypeOf(pb.Simple{})))
+
+	myBook := makeAddressBook()
+	fmt.Println(myBook)
+	for i := 0; i < 10; i++ {
+		person := makeRandomPerson()
+		addPerson(myBook, person)
+	}
+	fmt.Println(toJSON(myBook), reflect.TypeOf(pb.AddressBook{}))
 }

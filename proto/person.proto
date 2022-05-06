@@ -37,6 +37,7 @@ message Person {
 
 // Our address book file is just one of these.
 message AddressBook {
-  repeated Person people = 1;
+  int32 book_id = 1;
+  repeated Person people = 2;
 }
 // [END messages]
